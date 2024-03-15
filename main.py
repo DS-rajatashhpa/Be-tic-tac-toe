@@ -1,14 +1,11 @@
 from fastapi import FastAPI, WebSocket
 from starlette.websockets import WebSocketDisconnect
 from game_manager import GameManager
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-
+from fastapi.middleware.cors import CORSMiddlewar
 
 app = FastAPI()
 
 manager = GameManager()
-app.mount("/fe", StaticFiles(directory="C:\\Users\\statiq165\\my-tictactoe-frontend", html=True), name="static")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Use your ngrok URL here
