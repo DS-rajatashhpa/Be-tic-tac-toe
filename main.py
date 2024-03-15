@@ -1,7 +1,7 @@
 from fastapi import FastAPI, WebSocket
 from starlette.websockets import WebSocketDisconnect
 from game_manager import GameManager
-from fastapi.middleware.cors import CORSMiddlewar
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
